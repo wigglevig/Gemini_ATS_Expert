@@ -39,9 +39,9 @@ st.set_page_config(page_title="Resume Expert")
 
 st.header("Resume ATS Expert")
 st.subheader("This application helps you review your resume with the help of Google's GEMINI AI [LLM]")
-
-input_text = st.text_area("Job Description:", key="input")
 uploaded_file = st.file_uploader("Upload your Resume (PDF)...", type=["pdf"])
+input_text = st.text_area("Job Description(from linkedIn/website):", key="input")
+
 pdf_content = ""
 
 if uploaded_file is not None:
@@ -124,6 +124,6 @@ footer = """
 ---
 #### Made By [Vignesh](https://www.linkedin.com/in/vigneshpandi0908/)
 For Queries, Reach out on [LinkedIn](https://www.linkedin.com/in/vigneshpandi0908/)  
-*AI Resume Expert - Making Job Applications Easier*
+*Resume ATS Expert - Making Job Applications Easier*
 """
 st.markdown(footer, unsafe_allow_html=True)
